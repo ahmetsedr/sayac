@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-base {
+    @apply relative flex-1 min-w-[150px] overflow-hidden
+    text-white px-8 py-5 rounded-2xl font-bold 
+    transition-all duration-300
+    active:scale-95;
+  }
+
+  .btn-gradient-hover {
+    @apply absolute inset-0 -z-0
+    translate-y-full group-hover:translate-y-0 
+    transition-transform duration-300;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
