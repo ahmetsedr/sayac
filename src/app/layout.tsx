@@ -12,8 +12,7 @@ export const metadata: Metadata = {
     default: 'Sayaç Uygulaması',
     template: '%s | Sayaç Uygulaması'
   },
-  description: 'Modern ve kullanıcı dostu sayaç ve geri sayım uygulaması. Zamanınızı kolayca takip edin.',
-  keywords: ['sayaç', 'geri sayım', 'zamanlayıcı', 'kronometre', 'timer', 'countdown'],
+  description: 'Kullanıcı dostu sayaç ve geri sayım uygulaması.',
   authors: [{ name: 'ahmetsedr' }],
   creator: 'ahmetsedr',
   publisher: 'ahmetsedr',
@@ -28,10 +27,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://your-domain.com',
+    url: 'https://sayac-pink.vercel.app',
     siteName: 'Sayaç Uygulaması',
     title: 'Sayaç Uygulaması - Modern Zamanlayıcı',
-    description: 'Modern ve kullanıcı dostu sayaç ve geri sayım uygulaması. Zamanınızı kolayca takip edin.',
+    description: 'Kullanıcı dostu sayaç ve geri sayım uygulaması.',
     images: [
       {
         url: 'https://cdn-icons-png.flaticon.com/512/3798/3798413.png',
@@ -66,8 +65,28 @@ export default function RootLayout({
       <body className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
           {children}
-          <footer className="mt-8 text-gray-400 text-sm">
-            © 2024 Sayaç Uygulaması
+          <footer className="mt-8 text-gray-400 text-sm flex flex-col items-center gap-2">
+            <div className="flex gap-4">
+              <a 
+                href="https://github.com/ahmetsedr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                GitHub
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/ahmet-semih-dur/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <div>
+              © 2024 Sayaç Uygulaması
+            </div>
           </footer>
         </div>
         <script
